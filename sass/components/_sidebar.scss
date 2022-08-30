@@ -1,0 +1,145 @@
+#secondary {
+	position: relative;
+
+	h2.widget-title {
+		margin: 0 0 15px;
+		padding-bottom: 20px;
+		font-size: 24px;
+		font-weight: 700;
+		text-align: left;
+		color: #444;
+		padding-top: 0;
+		position: relative;
+		text-transform: uppercase;
+
+		&::after {
+			content: "";
+			display: block;
+			width: 80px;
+			height: 2px;
+			background: #b92a30;
+			bottom: 10px;
+			position: absolute;
+		}
+	}
+
+	.textwidget {
+		background-color: #fff;
+		padding: 20px;
+
+		p {
+			margin: 0 0 15px;
+		}
+
+		strong {
+			position: relative;
+
+			a {
+				&::before {
+					content: "";
+					display: block;
+					width: 20px;
+					height: 20px;
+					background: url('images/check2.png') no-repeat;
+					float: left;
+					margin-right: 10px;
+					vertical-align: top;
+					top: 15px;
+					left: 0;
+					margin-left: 0;
+				}
+			}
+		}
+
+		ul {
+			padding: 0;
+			margin: 0;
+		}
+
+		li {
+			list-style: none;
+			border-bottom: 1px solid #f3f3f3;
+		}
+
+		a {
+			display: inline-flex;
+			line-height: 24px;
+			padding: 10px 0;
+			text-decoration: none;
+			align-items: center;
+
+			&::before {
+				content: '';
+				display: block;
+				width: 10px;
+				height: 10px;
+				background: url('images/chevron-right-solid.svg') no-repeat;
+				margin-right: 10px;
+			}
+		}
+	}
+}
+
+.chien-dich-service {
+	position: relative;
+	padding: 50px 0;
+
+	h2.title {
+		@include title;
+	}
+
+	&__wrap {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 30px
+	}
+
+	&__item {
+		width: calc(50% - 30px);
+
+		&:last-child {
+			width: 100%;
+		}
+
+		h3 {
+			margin-top: 0;
+		}
+	}
+}
+
+.co-hoi {
+	position: relative;
+
+	h2.title {
+		@include title;
+	}
+}
+
+.ly_do {
+	position: relative;
+
+	h2.title {
+		background: linear-gradient(45deg, var(--color-accent) 0%, #ed5f6d 100%);
+		padding: 5px 20px;
+		margin-bottom: 30px;
+		color: #fff;
+		font-size: 28px;
+	}
+
+	&__wrap {
+		position: relative;
+		display: grid;
+		gap: 0 30px;
+		grid-template-columns: repeat(1, 1fr);
+
+		@media all and (min-width: 768px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		p {
+			font-weight: 600;
+			margin-top: 0;
+		}
+	}
+}

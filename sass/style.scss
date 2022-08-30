@@ -1,0 +1,25 @@
+/*!
+Theme Name: Kube
+Theme URI: http://underscores.me/
+Author: titanweb.vn
+Author URI: https://titanweb.vn/
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: kube
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+*/
+@import "variables";
+@import "mixins";
+
+@import "base/core";
+@import "base/bootstrap-grid";
+@import "base/slick";
+
+@import "components/menu";
+@import "components/header";
+@import "components/home";
+@import "components/about";
