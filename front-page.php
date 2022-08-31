@@ -16,6 +16,8 @@ get_header( 'home' );
 		get_template_part( 'template-parts/home/about-kubet' );
 		get_template_part( 'template-parts/home/products' );
 		get_template_part( 'template-parts/home/huong-dan' );
+		get_template_part( 'template-parts/home/vuot-troi' );
+		get_template_part( 'template-parts/home/luu-y' );
 	endwhile;
 	?>
 
