@@ -164,3 +164,119 @@
 		text-transform: uppercase;
 	}
 }
+
+.home-faq {
+	position: relative;
+	padding: 30px 0;
+
+	h2.title {
+		color: #000;
+		margin: 0 0 30px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	&__wrap {
+		position: relative;
+
+		details {
+			margin-bottom: 10px;
+		}
+
+		summary {
+			margin-top: 0;
+			border-radius: 0;
+			border: none;
+			padding-left: 0;
+			font-size: 18px;
+			background: linear-gradient(89.97deg, #FE1F27 -18.4%, rgba(254, 31, 39, 0) 78.98%);
+			padding: 15px;
+			margin-bottom: 0px;
+			background: linear-gradient(294.72deg, #FF4581 9.05%, #4388DD 79.28%);
+			color: #fff;
+		}
+
+		.panel {
+			background-color: #f8f6f6;
+			padding: 15px;
+		}
+	}
+}
+
+.ket-luan {
+	position: relative;
+	padding: 30px 0;
+
+	img {
+		width: 100%;
+	}
+
+	h2.title {
+		color: #000;
+		margin: 15px 0 30px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+}
+
+.home-news {
+	position: relative;
+	padding: 30px 0;
+
+	h2.title {
+		color: #000;
+		margin: 15px 0 30px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	&__wrap {
+		position: relative;
+		display: grid;
+		gap: 20px;
+		grid-template-columns: repeat(3, 1fr);
+
+		.item_post {
+			position: relative;
+		}
+
+		.entry-thumbnail {
+			position: relative;
+
+			&::after {
+				content: '';
+				display: block;
+				padding-bottom: 75%;
+			}
+
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		.entry-content {
+			padding: 15px 0;
+
+			h3 {
+				margin: 0;
+			}
+
+			a {
+				text-decoration: none;
+
+				&:hover {
+					color: #ffa71a;
+				}
+			}
+		}
+
+		.the_excerpt {
+			@include set-line(3);
+		}
+	}
+}

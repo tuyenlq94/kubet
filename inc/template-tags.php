@@ -163,3 +163,16 @@ if ( ! function_exists( 'wp_body_open' ) ) :
 		do_action( 'wp_body_open' );
 	}
 endif;
+function kubet_entry_post() {
+	?>
+	<div class="item_post">
+		<div class="entry-thumbnail">
+			<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+		</div>
+		<div class="entry-content">
+			<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+			<div class="the_excerpt"><?php the_excerpt(); ?></div>
+		</div>
+	</div>
+	<?php
+}

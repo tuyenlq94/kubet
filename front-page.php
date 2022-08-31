@@ -18,6 +18,9 @@ get_header( 'home' );
 		get_template_part( 'template-parts/home/huong-dan' );
 		get_template_part( 'template-parts/home/vuot-troi' );
 		get_template_part( 'template-parts/home/luu-y' );
+		get_template_part( 'template-parts/home/faq' );
+		get_template_part( 'template-parts/home/ket_luan' );
+		get_template_part( 'template-parts/home/news' );
 	endwhile;
 	?>
 
