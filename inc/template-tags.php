@@ -176,3 +176,36 @@ function kubet_entry_post() {
 	</div>
 	<?php
 }
+
+function kubet_recent_post() {
+	$terms = get_the_category( get_the_ID() );
+	$ids   = array_map(function ( $term ) {
+		return $term->term_id;
+	}, $terms);
+
+	$args  = array(
+		'posts_per_page' => 3,
+		'post__not_in'   => array( get_the_ID() ),
+		'category__in'   => $ids,
+	);
+	$query = new WP_Query( $args );
+	if ( ! $query->have_posts() ) {
+		return;
+	}
+	?>
+	<div class="related-posts">
+		<h3 class="related-posts__heading">
+			Tin liên quan
+		</h3>
+		<div class="new_Post">
+			<?php
+			while ( $query->have_posts() ) :
+				$query->the_post();
+				get_template_part( 'template-parts/content' );
+			endwhile;
+			wp_reset_postdata();
+			?>
+		</div>
+	</div>
+	<?php
+}

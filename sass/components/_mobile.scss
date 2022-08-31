@@ -103,4 +103,9 @@
 			width: 100%;
 		}
 	}
+
+	.archive_post,
+	.new_Post {
+		grid-template-columns: repeat(1, 1fr);
+	}
 }
