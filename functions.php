@@ -142,6 +142,39 @@ function kube_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer 1', 'kube' ),
+			'id'            => 'footer-1',
+			'description'   => esc_html__( 'Add widgets here.', 'kube' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer 2', 'kube' ),
+			'id'            => 'footer-2',
+			'description'   => esc_html__( 'Add widgets here.', 'kube' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer 3', 'kube' ),
+			'id'            => 'footer-3',
+			'description'   => esc_html__( 'Add widgets here.', 'kube' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
 }
 add_action( 'widgets_init', 'kube_widgets_init' );
 
@@ -149,7 +182,7 @@ add_action( 'widgets_init', 'kube_widgets_init' );
  * Enqueue scripts and styles.
  */
 function kube_scripts() {
-	wp_enqueue_style('font-awesome', 'https://cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css', '', '4.7.0');
+	wp_enqueue_style( 'font-awesome', 'https://cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css', '', '4.7.0' );
 	wp_enqueue_style( 'vietstart-animate', get_template_directory_uri() . '/css/animate.min.css' );
 	wp_enqueue_style( 'vietstart-magnific-popup', get_template_directory_uri() . '/css/magnific-popup.css' );
 	wp_enqueue_style( 'vietstart-slick', get_template_directory_uri() . '/css/slick.css' );

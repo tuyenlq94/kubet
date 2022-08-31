@@ -3,25 +3,26 @@ jQuery( function ( $ ) {
 	var clickEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
 
 	function toggleMenu() {
-		const nav = document.querySelector( '.nav' );
+		const nav = document.querySelector( '#site-navigation' );
+		//const nav = document.querySelector( '#home-menu' );
+		//const div = document.getElementById( '#home-menu' );
 		if ( !nav ) {
 			return;
 		}
-
+		const $menu = $( '#site-navigation' );
 		const menu = nav.querySelector( 'ul' ),
 			button = document.querySelector( '.menu-toggle' );
-
-		menu.setAttribute( 'aria-expanded', 'false' );
-		button.addEventListener( 'click', () => {
-			if ( nav.classList.contains( 'is-open' ) ) {
-				button.setAttribute( 'aria-expanded', 'false' );
-				menu.setAttribute( 'aria-expanded', 'false' );
-			} else {
-				button.setAttribute( 'aria-expanded', 'true' );
-				menu.setAttribute( 'aria-expanded', 'true' );
+		//button = document.getElementById( '.menu-toggle' );
+		$( document ).mouseup( e => {
+			if ( !$menu.is( e.target ) && $menu.has( e.target ).length === 0 ) // ... nor a descendant of the container
+			{
+				$menu.removeClass( 'is-open' );
 			}
+		} );
+		button.addEventListener( 'click', () => {
 			nav.classList.toggle( 'is-open' );
 		} );
+
 	}
 
 	function keepFocusInMenu() {

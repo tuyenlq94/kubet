@@ -1,188 +1,106 @@
 @media all and (max-width: 767px) {
-	.site-branding {
-		flex: 176px;
-		max-width: 176px;
+	.header-login {
+		display: none;
 	}
 
 	.header-menu {
-		flex: 0 0 13%;
-		display: block;
-		position: absolute !important;
-		max-width: 50px;
-		right: 0;
+		text-align: right;
 	}
 
-	.sp-search {
-		flex: 0 0 15%;
-		position: absolute;
-		right: 45px;
-		max-width: 100px;
-		padding-left: 0;
+	.menu-toggle svg {
+		fill: #fff;
 	}
 
-	.is-open>.menu {
-		width: 250px;
-		left: auto;
+	.nav li.current-menu-item a {
+		background: transparent;
 	}
 
-	.banner-item {
-		&__inner {
-			&::before {
-				content: '';
-				display: block;
-				background-color: rgba(184, 41, 47, 0.5);
+	.nav li:hover {
+		background: transparent;
+	}
+
+	.nav .sub-menu {
+		margin: 0;
+	}
+
+	.nav .sub-menu li {
+		padding: 0 15px;
+	}
+
+	.section-link {
+		&__wrap {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	.why-chose {
+		&__num {
+			&::after {
+				display: none;
+			}
+		}
+	}
+
+	.about-dealer {
+
+		&__image,
+		&__content {
+			width: 100%;
+		}
+
+		&__item {
+			&--content {
 				width: 100%;
-				height: 100%;
-				position: absolute;
-				top: 0;
-				left: 0;
-				z-index: 1;
+				order: 2;
+			}
+
+			&--image {
+				width: 100%;
+			}
+		}
+	}
+
+	.huong-dan {
+		&__item {
+			&--content {
+				width: 100%;
+				order: 2;
+			}
+
+			&--image {
+				width: 100%;
+			}
+		}
+	}
+
+	.vuot-troi {
+		&__item {
+			padding: 15px;
+		}
+
+		&__image {
+			width: 100%;
+			text-align: center;
+
+			img {
+				width: 60px;
 			}
 		}
 
 		&__content {
-			color: #fff;
-
-			p {
-				color: #fff;
-			}
-		}
-	}
-
-	.services {
-		&__wrap {
-			grid-template-columns: repeat(1, 1fr);
-		}
-	}
-
-	.products {
-		&__inner {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
-
-	.khac_biet {
-		&__item {
-			width: 50%;
-		}
-	}
-
-	.partner {
-		&__item {
-			width: 19.5%;
-		}
-	}
-
-	.service {
-		&__wrap {
-			display: flex;
-			flex-wrap: wrap;
-		}
-
-		&__item {
-			width: calc(50% - 15px);
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-
-			&:first-child {
-				width: 100%
-			}
-		}
-	}
-
-	.danh-muc {
-		&__inner {
-
-			.book,
-			.marketing {
-				width: 100%;
-			}
-		}
-	}
-
-	.menu-service .menu {
-		flex-wrap: wrap;
-		padding-left: 0;
-	}
-
-	.product-service {
-		&__wrap {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
-
-	.archive-post,
-	.price {
-		&__products {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
-
-	.blog-cat__list {
-		grid-template-columns: repeat(2, 1fr);
-	}
-
-	.tuyenngon ul li {
-		width: 100%;
-	}
-}
-
-@media all and (max-width: 500px) {
-	.products {
-		&__inner {
-			grid-template-columns: repeat(1, 1fr);
-		}
-	}
-
-	.khac_biet {
-		&__item {
 			width: 100%;
 		}
 	}
 
-	.partner {
-		&__item {
-			width: 24.375%;
-		}
-	}
-
-	.tai-sao {
-		&__item {
-			width: 100%;
-		}
-	}
-
-	.product-service,
-	.price {
+	.home-news {
 		&__wrap {
 			grid-template-columns: repeat(1, 1fr);
 		}
 	}
 
-	.archive-post {
-		&__products {
-			grid-template-columns: repeat(1, 1fr);
-		}
-	}
-
-	.blog-cat__list {
-		grid-template-columns: repeat(1, 1fr);
-	}
-
-	.archive-post__item {
-
-		.entry_thumbnail,
-		.entry_title {
-			width: 100%
-		}
-	}
-
-	.contact {
-
-		&__content,
-		&__form {
-			width: 100%
+	.site-footer {
+		&__item {
+			width: 100%;
 		}
 	}
 }
