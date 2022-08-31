@@ -28,8 +28,8 @@
 	}
 
 	.section-link {
-		&__wrap {
-			grid-template-columns: repeat(2, 1fr);
+		&__item {
+			width: 48%;
 		}
 	}
 

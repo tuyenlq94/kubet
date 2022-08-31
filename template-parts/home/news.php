@@ -1,9 +1,12 @@
 <?php
+$title_new = rwmb_meta('title_news');
+$id_cat = rwmb_meta('chuyen_muc');
+$id = $id_cat->term_id;
 $args      = array(
 	'post_type'      => 'post',
 	'post_status'    => 'publish',
 	'posts_per_page' => 6,
-	'category_name'  => 'tin-tuc',
+	'cat'  => $id,
 );
 $the_query = new WP_Query( $args );
 ?>

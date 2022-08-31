@@ -5,7 +5,7 @@ $about_content = rwmb_meta('gioi_thieu');
 <section class="about">
 	<div class="container">
 		<div class="about__wrap">
-			<h2 class="title"><?= esc_html($title_about);?></h2>
+			<h1 class="title"><?= esc_html($title_about);?></h1>
 			<div class="about__content">
 				<?= wp_kses_post(wpautop($about_content));?>
 			</div>
