@@ -22,12 +22,15 @@
 	height: 36px;
 	@include absolute-center();
 	font-size: 18px;
+	background-color: #ccc;
+	border-radius: 100%;
 
 	&:hover,
 	&.current {
 		text-decoration: none;
-		color: var(--hover);
+		color: #fff;
 		font-weight: 700;
+		background-color: rgb(59, 192, 255);
 	}
 }
 

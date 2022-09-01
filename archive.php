@@ -35,8 +35,6 @@ get_header();
 
 				endwhile;
 
-				the_posts_navigation();
-
 			else :
 
 				get_template_part( 'template-parts/content', 'none' );
@@ -44,9 +42,18 @@ get_header();
 			endif;
 			?>
 			</div>
+			<div class="pagination">
+				<?php
+				the_posts_pagination( [
+					'mid_size'  => 1,
+					'prev_text' => __( '←', 'ewriter' ),
+					'next_text' => __( '→', 'ewriter' ),
+				] );
+				?>
+			</div>
 		</div>
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
+
 get_footer();
