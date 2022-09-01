@@ -4,24 +4,16 @@ jQuery( function ( $ ) {
 
 	function toggleMenu() {
 		const nav = document.querySelector( '#site-navigation' );
-		//const nav = document.querySelector( '#home-menu' );
-		//const div = document.getElementById( '#home-menu' );
 		if ( !nav ) {
 			return;
 		}
 		const $menu = $( '#site-navigation' );
 		const menu = nav.querySelector( 'ul' ),
 			button = document.querySelector( '.menu-toggle' );
-		//button = document.getElementById( '.menu-toggle' );
-		$( document ).mouseup( e => {
-			if ( !$menu.is( e.target ) && $menu.has( e.target ).length === 0 ) // ... nor a descendant of the container
-			{
-				$menu.removeClass( 'is-open' );
-			}
-		} );
 		button.addEventListener( 'click', () => {
 			nav.classList.toggle( 'is-open' );
 		} );
+
 
 	}
 
@@ -102,31 +94,7 @@ jQuery( function ( $ ) {
 			rows: 0,
 			autoplaySpeed: 5000,
 		} );
-		$( '.customers__wrap' ).slick( {
-			slidesToShow: 3,
-			dots: false,
-			arrows: false,
-			autoplay: true,
-			rows: 0,
-			autoplaySpeed: 5000,
-			responsive: [
-				{
-					breakpoint: 600,
-					centerPadding: '0px',
-					settings: {
-						slidesToShow: 1,
-					}
-				},
-			]
-		} );
-		$( '.blog__wrap' ).slick( {
-			slidesToShow: 1,
-			dots: true,
-			arrows: false,
-			autoplay: false,
-			rows: 0,
-			autoplaySpeed: 5000,
-		} );
+
 	};
 	function maginicpopup() {
 		$( '.popup-with-form' ).magnificPopup( {
@@ -247,10 +215,10 @@ jQuery( function ( $ ) {
 	keepFocusInMenu();
 	toggleMenu();
 	toggleSubmenu();
-	openSearch();
+	//openSearch();
 	scrollToTop();
 	slickSlide();
-	maginicpopup();
+	//maginicpopup();
 	tab();
 	//counter_number();
 	tab_product();

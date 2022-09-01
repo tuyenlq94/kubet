@@ -184,12 +184,12 @@ add_action( 'widgets_init', 'kube_widgets_init' );
 function kube_scripts() {
 	wp_enqueue_style( 'font-awesome', 'https://cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css', '', '4.7.0' );
 	wp_enqueue_style( 'vietstart-animate', get_template_directory_uri() . '/css/animate.min.css' );
-	wp_enqueue_style( 'vietstart-magnific-popup', get_template_directory_uri() . '/css/magnific-popup.css' );
+	// wp_enqueue_style( 'vietstart-magnific-popup', get_template_directory_uri() . '/css/magnific-popup.css' );
 	wp_enqueue_style( 'vietstart-slick', get_template_directory_uri() . '/css/slick.css' );
 	wp_enqueue_style( 'kube-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'kube-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'vietstart-magnific', get_template_directory_uri() . '/js/jquery.magnific-popup.min.js', [ 'jquery' ], '1.8', true );
+	// wp_enqueue_script( 'vietstart-magnific', get_template_directory_uri() . '/js/jquery.magnific-popup.min.js', [ 'jquery' ], '1.8', true );
 	wp_enqueue_script( 'vietstart-wow', get_template_directory_uri() . '/js/wow.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'vietstart-slick', get_template_directory_uri() . '/js/slick.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'vietstart-script', get_template_directory_uri() . '/js/script.js', [ 'jquery' ], '1.0', true );
